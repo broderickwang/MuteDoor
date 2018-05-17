@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MuteDoor</string>
+
+    <string name="guangqi">光企：</string>
+    <string name="shangxiafang">上下方：</string>
+    <string name="boligao">玻璃高：</string>
+    <string name="bolikuan">玻璃宽：</string>
+    <string name="biankuanggao">边框高：</string>
+    <string name="shangxiahua">上下滑：</string>
+    <string name="zhongkongtiaokuan">中空条宽：</string>
+    <string name="zhongkongtiaogao">中空条高：</string>
+</resources>
