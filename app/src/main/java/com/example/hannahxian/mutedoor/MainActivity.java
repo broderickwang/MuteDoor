@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.hannahxian.mutedoor.listner.MyTextWatcher;
+import com.example.hannahxian.mutedoor.ui.EityFiveActivity;
 import com.example.hannahxian.mutedoor.ui.EityThreeActivity;
 import com.example.hannahxian.mutedoor.ui.NintyActivity;
 import com.getbase.floatingactionbutton.FloatingActionButton;
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if(TextUtils.isEmpty(s)){
-                    mDoorHeightWrap.setError("请输入门洞宽");
+                    mDoorWidthWrap.setError("请输入门洞宽");
                 }else{
                     mDoorWidthWrap.setError(EMPTY_STRING);
                     mJump = true;
@@ -117,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                     jumpActivity(EityThreeActivity.class);
                     break;
                 case R.id.eityfive:
+                    jumpActivity(EityFiveActivity.class);
                     break;
             }
         }
