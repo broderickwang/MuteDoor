@@ -1,4 +1,4 @@
-﻿package com.example.hannahxian.mutedoor;
+package com.example.hannahxian.mutedoor;
 
 import android.content.Intent;
 import android.os.Bundle;
