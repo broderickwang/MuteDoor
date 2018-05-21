@@ -55,7 +55,7 @@ public class EityFiveActivity extends AppCompatActivity {
     private void getData() {
         mDoorHeight = getIntent().getIntExtra("doorHeight", 0);
         mDoorWidth = getIntent().getIntExtra("doorWidth", 0);
-        mGlassHeight = 203;
+        mGlassHeight = mDoorHeight - 203;
         mGlassWidth = ((float)(mDoorWidth + 44) / 2) - 148;
     }
 }

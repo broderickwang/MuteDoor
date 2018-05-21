@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_1x"
-            android:text="@string/biankuanggao"/>
+            android:text="边封高"/>
         <TextView
             android:id="@+id/biankuanggao"
             android:layout_width="wrap_content"
