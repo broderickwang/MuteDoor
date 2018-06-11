@@ -12,6 +12,8 @@ import com.example.hannahxian.mutedoor.listner.MyTextWatcher;
 import com.example.hannahxian.mutedoor.ui.EityFiveActivity;
 import com.example.hannahxian.mutedoor.ui.EityThreeActivity;
 import com.example.hannahxian.mutedoor.ui.NintyActivity;
+import com.example.hannahxian.mutedoor.ui.ThirtyJGWActivity;
+import com.example.hannahxian.mutedoor.ui.TwentyFiveJGWActivity;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
@@ -22,6 +24,10 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
 
     private static final String EMPTY_STRING = "";
+    @BindView(R.id.twentyFivejgw)
+    FloatingActionButton twentyFivejgw;
+    @BindView(R.id.thirtyjgw)
+    FloatingActionButton thirtyjgw;
 
     private boolean mJump = false;
 
@@ -45,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     TextInputLayout mDoorHeightWrap;
     @BindView(R.id.door_width_wrap)
     TextInputLayout mDoorWidthWrap;
+
     /*@BindView(R.id.glass_height_wrap)
     TextInputLayout mGlassHeightWrap;
     @BindView(R.id.glass_width_wrap)
@@ -64,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
         mDoorHeight.addTextChangedListener(new MyTextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(TextUtils.isEmpty(s)){
+                if (TextUtils.isEmpty(s)) {
                     mDoorHeightWrap.setError("请输入门洞高");
-                }else {
+                } else {
                     mDoorHeightWrap.setError(EMPTY_STRING);
                     mJump = true;
                 }
@@ -75,9 +82,9 @@ public class MainActivity extends AppCompatActivity {
         mDoorWidth.addTextChangedListener(new MyTextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(TextUtils.isEmpty(s)){
+                if (TextUtils.isEmpty(s)) {
                     mDoorWidthWrap.setError("请输入门洞宽");
-                }else{
+                } else {
                     mDoorWidthWrap.setError(EMPTY_STRING);
                     mJump = true;
                 }
@@ -107,9 +114,9 @@ public class MainActivity extends AppCompatActivity {
         });*/
     }
 
-    @OnClick({R.id.ninty, R.id.eitythree, R.id.eityfive})
+    @OnClick({R.id.ninty, R.id.eitythree, R.id.eityfive,R.id.twentyFivejgw, R.id.thirtyjgw})
     public void onViewClicked(View view) {
-        if(validateValue()) {
+        if (validateValue()) {
             switch (view.getId()) {
                 case R.id.ninty:
                     jumpActivity(NintyActivity.class);
@@ -120,20 +127,26 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.eityfive:
                     jumpActivity(EityFiveActivity.class);
                     break;
+                case R.id.twentyFivejgw:
+                    jumpActivity(TwentyFiveJGWActivity.class);
+                    break;
+                case R.id.thirtyjgw:
+                    jumpActivity(ThirtyJGWActivity.class);
+                    break;
             }
         }
-        if(mJump) {
+        if (mJump) {
 
         }
     }
 
-    private boolean validateValue(){
+    private boolean validateValue() {
         boolean rst = true;
-        if(TextUtils.isEmpty(mDoorHeight.getText().toString())){
+        if (TextUtils.isEmpty(mDoorHeight.getText().toString())) {
             mDoorHeightWrap.setError("请输入门洞高");
             rst = false;
         }
-        if(TextUtils.isEmpty(mDoorWidth.getText().toString())){
+        if (TextUtils.isEmpty(mDoorWidth.getText().toString())) {
             mDoorWidthWrap.setError("请输入门洞宽");
             rst = false;
         }
@@ -150,12 +163,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void jumpActivity(Class claz) {
         Intent intent = new Intent(MainActivity.this, claz);
-        intent.putExtra("doorHeight",Integer.valueOf(mDoorHeight.getText().toString()));
-        intent.putExtra("doorWidth",Integer.valueOf(mDoorWidth.getText().toString()));
+        intent.putExtra("doorHeight", Integer.valueOf(mDoorHeight.getText().toString()));
+        intent.putExtra("doorWidth", Integer.valueOf(mDoorWidth.getText().toString()));
         /*intent.putExtra("glassHeight",Integer.valueOf(mGlassHeight.getText().toString()));
         intent.putExtra("glassWidth",Integer.valueOf(mGlassWidth.getText().toString()));*/
         startActivity(intent);
     }
-
 
 }

@@ -103,6 +103,22 @@
                 fab:fab_title="85凹弧 "
                 android:src="@mipmap/calculator"
                 fab:fab_colorPressed="@color/white_pressed"/>
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/twentyFivejgw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/white"
+                fab:fab_title="25金钢网 "
+                android:src="@mipmap/calculator"
+                fab:fab_colorPressed="@color/white_pressed"/>
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/thirtyjgw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/white"
+                fab:fab_title="30金钢网 "
+                android:src="@mipmap/calculator"
+                fab:fab_colorPressed="@color/white_pressed"/>
 
         </com.getbase.floatingactionbutton.FloatingActionsMenu>
     </RelativeLayout>

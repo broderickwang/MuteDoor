@@ -9,4 +9,11 @@
     <string name="shangxiahua">上下滑：</string>
     <string name="zhongkongtiaokuan">中空条宽：</string>
     <string name="zhongkongtiaogao">中空条高：</string>
+    
+    <string name="jgw_waikuanggao">外框高：</string>
+    <string name="jgw_waikuangkuan">外框款：</string>
+    <string name="jgw_shangao">扇高：</string>
+    <string name="jgw_shankuan">扇宽：</string>
+    <string name="jgw_wanggao">网高：</string>
+    <string name="jgw_wangkuan">网宽：</string>
 </resources>
