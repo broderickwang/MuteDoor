@@ -28,6 +28,10 @@ public class NintyActivity extends AppCompatActivity {
     TextView mZhongkongtiaokuan;
     @BindView(R.id.zhongkongtiaogao)
     TextView mZhongkongtiaogao;
+    @BindView(R.id.org_door_height)
+    TextView mOrgDoorHeight;
+    @BindView(R.id.org_door_width)
+    TextView mOrgDoorWidth;
 
     private Integer mDoorHeight, mDoorWidth;
     private float mGlassHeight, mGlassWidth;
@@ -44,21 +48,24 @@ public class NintyActivity extends AppCompatActivity {
     }
 
     private void setData() {
-        Util.setText(mGuangqi,String.valueOf(mDoorHeight-55));
-        Util.setText(mShangxiafang,String.valueOf((float) (mDoorWidth+50)/2));
-        Util.setText(mBoligao,String.valueOf(mGlassHeight));
-        Util.setText(mBolikuan,String.valueOf(mGlassWidth));
-        Util.setText(mBiankuanggao,String.valueOf(mDoorHeight));
-        Util.setText(mShangxiahua,String.valueOf(mDoorWidth-54));
-        Util.setText(mZhongkongtiaokuan,String.valueOf(mGlassWidth));
-        Util.setText(mZhongkongtiaogao,String.valueOf(mGlassHeight-16));
+        Util.setText(mOrgDoorHeight,String.valueOf(mDoorHeight));
+        Util.setText(mOrgDoorWidth,String.valueOf(mDoorWidth));
+
+        Util.setText(mGuangqi, String.valueOf(mDoorHeight - 55));
+        Util.setText(mShangxiafang, String.valueOf((float) (mDoorWidth + 50) / 2));
+        Util.setText(mBoligao, String.valueOf(mGlassHeight));
+        Util.setText(mBolikuan, String.valueOf(mGlassWidth));
+        Util.setText(mBiankuanggao, String.valueOf(mDoorHeight));
+        Util.setText(mShangxiahua, String.valueOf(mDoorWidth - 54));
+        Util.setText(mZhongkongtiaokuan, String.valueOf(mGlassWidth));
+        Util.setText(mZhongkongtiaogao, String.valueOf(mGlassHeight - 16));
     }
 
     private void getData() {
         mDoorHeight = getIntent().getIntExtra("doorHeight", 0);
         mDoorWidth = getIntent().getIntExtra("doorWidth", 0);
         mGlassHeight = mDoorHeight - 213;
-        mGlassWidth = ((float)(mDoorWidth + 50) / 2) - 158;
+        mGlassWidth = ((float) (mDoorWidth + 50) / 2) - 158;
     }
 
 }

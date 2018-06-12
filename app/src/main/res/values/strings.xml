@@ -16,4 +16,7 @@
     <string name="jgw_shankuan">扇宽：</string>
     <string name="jgw_wanggao">网高：</string>
     <string name="jgw_wangkuan">网宽：</string>
+
+    <string name="jym_door_height">门洞高：</string>
+    <string name="jym_door_width">门洞宽：</string>
 </resources>
