@@ -7,6 +7,14 @@
     tools:context=".ui.NintyActivity"
     android:layout_margin="16dp"
     android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.example.hannahxian.mutedoor.view.CleanEdit
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:clean_img="@mipmap/clean_edit"></com.example.hannahxian.mutedoor.view.CleanEdit>
+    </LinearLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
